@@ -1,4 +1,85 @@
 ---
+layout: single
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<div style="text-align: justify; margin-bottom: 30px;">
+<p>Here you can find my published research papers, conference proceedings, and other academic works. My research contributions span across [你的研究领域], with a focus on [具体研究方向].</p>
+</div>
+
+{% if site.author.googlescholar %}
+  <div style="margin-bottom: 20px; color: #666;">
+    You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
+  </div>
+{% endif %}
+
+<!-- ORCID Display (if you have one) -->
+<!-- Uncomment and add your ORCID if needed
+<div style="margin-bottom: 30px; color: #888;">
+  <strong>ORCID:</strong> <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">0000-0000-0000-0000</a>
+</div>
+-->
+
+<!-- Journal Papers Section -->
+<h2 style="color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px;">Journal Papers</h2>
+
+<ul style="list-style: none; padding: 0;">
+{% assign journal_papers = site.publications | where: "category", "manuscripts" | sort: "date" | reverse %}
+{% for post in journal_papers %}
+  <li style="margin-bottom: 15px; line-height: 1.6;">
+    {% assign authors = post.citation | split: '(' | first | strip %}
+    {% assign year = post.date | date: "%Y" %}
+    {{ authors }}, "<a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>," 
+    <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
+    {% if post.paperurl %}
+      [<a href="{{ post.paperurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">PDF</a>]
+    {% endif %}
+    {% if post.slidesurl %}
+      [<a href="{{ post.slidesurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">Slides</a>]
+    {% endif %}
+    {% if post.codeurl %}
+      [<a href="{{ post.codeurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">Code</a>]
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+<!-- Conference Papers Section -->
+<h2 style="color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; margin-top: 40px;">Conference Papers</h2>
+
+<ul style="list-style: none; padding: 0;">
+{% assign conference_papers = site.publications | where: "category", "conferences" | sort: "date" | reverse %}
+{% for post in conference_papers %}
+  <li style="margin-bottom: 15px; line-height: 1.6;">
+    {% assign authors = post.citation | split: '(' | first | strip %}
+    {% assign year = post.date | date: "%Y" %}
+    {{ authors }}, "<a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>," 
+    <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
+    {% if post.paperurl %}
+      [<a href="{{ post.paperurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">PDF</a>]
+    {% endif %}
+    {% if post.slidesurl %}
+      [<a href="{{ post.slidesurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">Slides</a>]
+    {% endif %}
+    {% if post.codeurl %}
+      [<a href="{{ post.codeurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">Code</a>]
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+
+
+
+
+
+
+
+
+
+<!-- ---
 layout: archive
 title: "Publications"
 permalink: /publications/
@@ -34,3 +115,4 @@ author_profile: true
 
 
 
+ -->
