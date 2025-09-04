@@ -22,7 +22,7 @@ repository               : "DongYang26/DongYang26.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "files/profile.png"
+  avatar           : files/profile.png
   name             : "Dong Yang"
   pronouns         : # example: "she/her"  
   bio              : "PhD student at GSU"
@@ -62,7 +62,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/dyang26/"
+  linkedin         : "dyang26/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -76,7 +76,7 @@ author:
   wikipedia        : # Username
   xing             : # Username
   youtube          : # Username
-  zhihu            : "https://www.zhihu.com/people/xu-wen-hua-72"
+  zhihu            : "xu-wen-hua-72"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
