@@ -22,7 +22,7 @@ repository               : "DongYang26/DongYang26.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : /files/profile.png
+  avatar           : https://DongYang26.github.io/files/profile.png
   name             : "Dong Yang"
   pronouns         : # example: "she/her"  
   bio              : "PhD student at GSU"
