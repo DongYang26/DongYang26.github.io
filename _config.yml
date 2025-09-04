@@ -22,7 +22,7 @@ repository               : "DongYang26/DongYang26.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : files/profile.png
+  avatar           : /files/profile.png
   name             : "Dong Yang"
   pronouns         : # example: "she/her"  
   bio              : "PhD student at GSU"
@@ -37,7 +37,7 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=gSN46R8AAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/0000-0002-9907-395X"
+  orcid            : # URL
   semantic         : # URL
   pubMed           : # URL
   researchgate     : "https://www.researchgate.net/profile/Dong-Yang-129?ev=hdr_xprf"
@@ -89,9 +89,9 @@ publication_category:
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
