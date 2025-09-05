@@ -51,7 +51,7 @@ classes: wide
 <!-- Journal Papers Section -->
 <h2 style="color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px;">Journal Papers</h2>
 
-<ul style="list-style: none; padding: 0;">
+<ul class="publication-list" style="list-style: none; padding: 0;">
 {% assign journal_papers = site.publications | where: "category", "manuscripts" | sort: "date" | reverse %}
 {% for post in journal_papers %}
   <li style="margin-bottom: 15px; line-height: 1.6;">
@@ -75,7 +75,7 @@ classes: wide
 <!-- Conference Papers Section -->
 <h2 style="color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; margin-top: 40px;">Conference Papers</h2>
 
-<ul style="list-style: none; padding: 0;">
+<ul class="publication-list" style="list-style: none; padding: 0;">
 {% assign conference_papers = site.publications | where: "category", "conferences" | sort: "date" | reverse %}
 {% for post in conference_papers %}
   <li style="margin-bottom: 15px; line-height: 1.6;">
