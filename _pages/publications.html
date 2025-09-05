@@ -8,25 +8,56 @@ classes: wide
 
 
 <style>
-.page__content {
-  max-width: 1200px !important;
-  margin: 0 auto;
+/* 强制全屏宽度 */
+.page {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
-.page {
+.page__content {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 20px 40px !important;
+}
+
+.page__inner-wrap {
+  max-width: none !important;
   width: 100% !important;
 }
 
-@media (min-width: 80em) {
-  .page {
-    width: calc(100% - 300px) !important;
-    margin-left: 300px;
-  }
+.masthead__inner-wrap,
+.page__footer-wrapper {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+/* 移除任何容器限制 */
+.container,
+.wrapper {
+  max-width: none !important;
+  width: 100% !important;
 }
 
 .publication-list {
-  max-width: none !important;
   width: 100%;
+}
+
+/* 确保在所有屏幕尺寸下都全宽 */
+@media (min-width: 80em) {
+  .page {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  
+  .page__content {
+    width: 100% !important;
+    max-width: none !important;
+  }
 }
 </style>
 
