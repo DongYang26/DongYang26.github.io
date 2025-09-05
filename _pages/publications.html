@@ -7,19 +7,18 @@ classes: wide
 
 
 <style>
-/* 强制全屏宽度 */
+/* 强制全屏宽度，减少边距 */
 .page {
   width: 100% !important;
   max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin: 0 !important;
 }
 
 .page__content {
   max-width: none !important;
   width: 100% !important;
   margin: 0 !important;
-  padding: 20px 40px !important;
+  padding: 20px 5% !important; /* 左右只留5%边距 */
 }
 
 .page__inner-wrap {
@@ -27,12 +26,18 @@ classes: wide
   width: 100% !important;
 }
 
-.masthead__inner-wrap,
+.masthead__inner-wrap {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
 .page__footer-wrapper {
   max-width: none !important;
   width: 100% !important;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
 }
 
 /* 移除任何容器限制 */
@@ -44,6 +49,42 @@ classes: wide
 
 .publication-list {
   width: 100%;
+}
+
+/* 增大字体和行高 */
+.publication-list li {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .page__content {
+    padding: 15px 3% !important; /* 手机上更少边距 */
+  }
+  .masthead__inner-wrap,
+  .page__footer-wrapper {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page__content {
+    padding: 20px 8% !important; /* 大屏幕稍微多一点边距 */
+  }
+  .publication-list li {
+    font-size: 17px !important; /* 大屏幕字体稍大 */
+  }
+}
+
+@media (min-width: 1600px) {
+  .page__content {
+    padding: 20px 12% !important; /* 超大屏幕保持可读性 */
+  }
+  .publication-list li {
+    font-size: 18px !important;
+  }
 }
 
 /* 确保在所有屏幕尺寸下都全宽 */
@@ -59,7 +100,6 @@ classes: wide
   }
 }
 </style>
-
 
 
 <div style="text-align: justify; margin-bottom: 30px;">
