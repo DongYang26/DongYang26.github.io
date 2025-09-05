@@ -89,8 +89,13 @@ classes: wide
   <li style="margin-bottom: 15px; line-height: 1.6;">
     {% assign authors = post.citation | split: '(' | first | strip %}
     {% assign year = post.date | date: "%Y" %}
-    {{ authors }}, "<a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>," 
-    <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
+    {{ authors }}, "
+    {% if post.external_url %}
+      <a href="{{ post.external_url }}" target="_blank" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+    {% else %}
+      <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+    {% endif %}
+    ," <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
     {% if post.paperurl %}
       [<a href="{{ post.paperurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">PDF</a>]
     {% endif %}
@@ -113,8 +118,13 @@ classes: wide
   <li style="margin-bottom: 15px; line-height: 1.6;">
     {% assign authors = post.citation | split: '(' | first | strip %}
     {% assign year = post.date | date: "%Y" %}
-    {{ authors }}, "<a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>," 
-    <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
+    {{ authors }}, "
+    {% if post.external_url %}
+      <a href="{{ post.external_url }}" target="_blank" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+    {% else %}
+      <a href="{{ post.url }}" style="color: #0066cc; text-decoration: none;">{{ post.title }}</a>
+    {% endif %}
+    ," <em style="color: #666;">{{ post.venue }}</em>, {{ year }}.
     {% if post.paperurl %}
       [<a href="{{ post.paperurl }}" target="_blank" style="color: #0066cc; text-decoration: none;">PDF</a>]
     {% endif %}
